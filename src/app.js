@@ -6,14 +6,20 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  let randomNumber = Math.random() * 10;
   document.querySelector("#excuse").innerHTML = randomNumber;
-  console.log("test" + randomNumber);
+  console.log("test");
 };
 
+let randomNumber = Math.round(Math.random() * 3);
+
 let generateExcuse = () => {
-  let subject = {};
-  let action = {};
-  let what = {};
-  let when = {};
+  let subject = ["subj a", "subj b", "subj c"];
+  let action = ["action a", "action b", "action c"];
+
+  let subjectIndex = randomNumber;
+
+  return subject[subjectIndex];
 };
+//  let what = {};
+//  let when = {};
+//};
