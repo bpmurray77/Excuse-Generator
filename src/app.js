@@ -16,13 +16,25 @@ window.onload = () => {
 };
 
 const generateExcuse = () => {
-  let randomNumber = Math.round(Math.random() * 2);
-  let subject = ["subj a", "subj b", "subj c"];
-  let action = ["action a", "action b", "action c"];
+  let randomSubj = Math.floor(Math.random() * 3);
+  let randomAction = Math.floor(Math.random() * 3);
+  let randomItem = Math.floor(Math.random() * 3);
+  let randomTime = Math.floor(Math.random() * 3);
+  let subject = ["My cat", "A bird", "A snake"];
+  let action = [" ate", " stole", " destroyed"];
+  let item = [" my homework", " my money", " my whole house"];
+  let time = [
+    " last night.",
+    " yesterday.",
+    " right in front of us just now, you saw it!"
+  ];
 
-  let subjectIndex = randomNumber;
-
-  return subject[subjectIndex];
+  return (
+    subject[randomSubj] +
+    action[randomAction] +
+    item[randomItem] +
+    time[randomTime]
+  );
 };
 //  let what = {};
 //  let when = {};
